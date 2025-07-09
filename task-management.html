@@ -73,8 +73,9 @@
 
     <!-- 中间按钮区域 -->
     <main class="flex-grow container mx-auto px-4 py-12">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- 第一排：4个按钮 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <!-- 按钮1 -->
                 <a href="https://www.kdocs.cn/wo/sl/v12Zzl6V" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
                     <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
@@ -90,66 +91,110 @@
 
                 <!-- 按钮2 -->
                 <a href="https://www.kdocs.cn/wo/sl/v1437QvV" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
-                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
-                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
-                            <i class="fa fa-plus-square text-primary text-3xl"></i>
+                    <div class="h-48 bg-gradient-to-br from-secondary/5 to-secondary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-secondary/10 group-hover:bg-secondary/20 icon-animation">
+                            <i class="fa fa-plus-square text-secondary text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">添加新任务</h3>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 group-hover:text-primary">增加最新接手的任务详细信息</p>
+                        <p class="text-gray-600 group-hover:text-secondary">增加最新接手的任务详细信息</p>
                     </div>
                 </a>
 
                 <!-- 按钮3 -->
                 <a href="https://www.kdocs.cn/wo/sl/v13Eoi7k" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
-                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
-                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
-                            <i class="fa fa-tasks text-primary text-3xl"></i>
+                    <div class="h-48 bg-gradient-to-br from-accent/5 to-accent/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-accent/10 group-hover:bg-accent/20 icon-animation">
+                            <i class="fa fa-tasks text-accent text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">任务分配</h3>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 group-hover:text-primary">将新添加的任务分配给责任人</p>
+                        <p class="text-gray-600 group-hover:text-accent">将新添加的任务分配给责任人</p>
                     </div>
                 </a>
 
+                <!-- 科研统计按钮组 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow科研统计">
+                    <div class="h-48 bg-gradient-to-br from-success/5 to-success/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-success/10 group-hover:bg-success/20 icon-animation">
+                            <i class="fa fa-flask text-success text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">科研统计</h3>
+                    </div>
+                    <div class="p-4 grid grid-cols-2 gap-2">
+                        <!-- 项目 -->
+                        <a href="#" class="p-3 bg-neutral rounded-lg hover:bg-success/5 transition-colors text-center">
+                            <i class="fa fa-briefcase mr-2"></i>项目
+                        </a>
+                        <!-- 论文 -->
+                        <a href="#" class="p-3 bg-neutral rounded-lg hover:bg-success/5 transition-colors text-center">
+                            <i class="fa fa-file-text-o mr-2"></i>论文
+                        </a>
+                        <!-- 专利 -->
+                        <a href="#" class="p-3 bg-neutral rounded-lg hover:bg-success/5 transition-colors text-center">
+                            <i class="fa fa-certificate mr-2"></i>专利
+                        </a>
+                        <!-- 著作 -->
+                        <a href="#" class="p-3 bg-neutral rounded-lg hover:bg-success/5 transition-colors text-center">
+                            <i class="fa fa-book mr-2"></i>著作
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二排：4个按钮（最后一个是备用2按钮） - 增加了min-h-[320px]类 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- 按钮4 -->
-                <a href="https://www.kdocs.cn/wo/sl/v117mNfL" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
-                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
-                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
-                            <i class="fa fa-users text-primary text-3xl"></i>
+                <a href="https://www.kdocs.cn/wo/sl/v117mNfL" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow min-h-[320px]">
+                    <div class="h-48 bg-gradient-to-br from-warning/5 to-warning/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-warning/10 group-hover:bg-warning/20 icon-animation">
+                            <i class="fa fa-users text-warning text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">教师信息展示</h3>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 group-hover:text-primary">展示所有教师的详细信息</p>
+                        <p class="text-gray-600 group-hover:text-warning">展示所有教师的详细信息</p>
                     </div>
                 </a>
 
                 <!-- 按钮5 -->
-                <a href="https://www.kdocs.cn/wo/sl/v14QxsZG" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
-                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
-                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
-                            <i class="fa fa-upload text-primary text-3xl"></i>
+                <a href="https://www.kdocs.cn/wo/sl/v14QxsZG" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow min-h-[320px]">
+                    <div class="h-48 bg-gradient-to-br from-danger/5 to-danger/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-danger/10 group-hover:bg-danger/20 icon-animation">
+                            <i class="fa fa-upload text-danger text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">资料提交入口</h3>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 group-hover:text-primary">所有需要提交的资料都从这里提交</p>
+                        <p class="text-gray-600 group-hover:text-danger">所有需要提交的资料都从这里提交</p>
                     </div>
                 </a>
 
-                <!-- 按钮6 -->
-                <a href="https://www.kdocs.cn/wo/sl/v13Vi94z" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                <!-- 备用按钮 -->
+                <a href="#" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow min-h-[320px]">
                     <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
                         <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
-                            <i class="fa fa-check-square-o text-primary text-3xl"></i>
+                            <i class="fa fa-cog text-primary text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">资料提交结果</h3>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">备用</h3>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 group-hover:text-primary">查看所有人提交资料情况</p>
+                        <p class="text-gray-600 group-hover:text-primary">备用功能入口</p>
+                    </div>
+                </a>
+
+                <!-- 备用2按钮 -->
+                <a href="#" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow min-h-[320px]">
+                    <div class="h-48 bg-gradient-to-br from-secondary/5 to-secondary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-secondary/10 group-hover:bg-secondary/20 icon-animation">
+                            <i class="fa fa-sliders text-secondary text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">备用2</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-secondary">备用功能入口2</p>
                     </div>
                 </a>
             </div>
@@ -179,14 +224,17 @@
         document.querySelectorAll('a').forEach((button, index) => {
             const colors = ['from-primary/5 to-primary/10', 'from-secondary/5 to-secondary/10', 'from-accent/5 to-accent/10', 
                            'from-success/5 to-success/10', 'from-warning/5 to-warning/10', 'from-danger/5 to-danger/10'];
-            const icons = ['fa-user-plus', 'fa-plus-square', 'fa-tasks', 'fa-users', 'fa-upload', 'fa-check-square-o'];
+            const icons = ['fa-user-plus', 'fa-plus-square', 'fa-tasks', 'fa-users', 'fa-upload', 'fa-check-square-o', 'fa-cog', 'fa-sliders'];
             
-            // 设置图标
-            button.querySelector('i').className = `fa ${icons[index]} text-primary text-3xl`;
-            
-            // 设置渐变背景
-            button.querySelector('.h-48').className = `h-48 bg-gradient-to-br ${colors[index]} flex flex-col items-center justify-center p-4`;
+            // 跳过科研统计按钮组
+            if (index < 8) {
+                // 设置图标
+                button.querySelector('i').className = `fa ${icons[index]} text-primary text-3xl`;
+                
+                // 设置渐变背景
+                button.querySelector('.h-48').className = `h-48 bg-gradient-to-br ${colors[index % 6]} flex flex-col items-center justify-center p-4`;
+            }
         });
     </script>
 </body>
-</html>    
+</html>
