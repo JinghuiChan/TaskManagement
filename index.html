@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常任务管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFFB',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129',
+                        accent: '#7B61FF',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .btn-hover-effect {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .card-shadow {
+                @apply shadow-md hover:shadow-xl transition-shadow duration-300;
+            }
+            .icon-animation {
+                @apply transition-all duration-500 hover:rotate-12 hover:scale-125;
+            }
+            .button-glow {
+                @apply hover:shadow-primary/50 hover:shadow-xl;
+            }
+            .text-gradient {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+            }
+            .card-hover {
+                @apply hover:bg-gradient-to-br from-primary/5 to-accent/5 transition-all duration-500;
+            }
+            .icon-container {
+                @apply w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-all duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-neutral min-h-screen flex flex-col">
+    <!-- 顶部标题区域 -->
+    <header class="relative bg-gradient-to-r from-primary to-secondary text-white py-8 shadow-lg overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik0gNDAgMCAwIDQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIgb3BhY2l0eT0iMC41Ii8+PC9zdmc+')] opacity-10"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-[clamp(1.8rem,5vw,2.8rem)] font-bold tracking-tight">
+                <i class="fa fa-tasks mr-3 animate-pulse-slow"></i>日常任务管理系统
+            </h1>
+            <p class="mt-2 text-lg opacity-90">高效管理，提升教学质量</p>
+        </div>
+    </header>
+
+    <!-- 中间按钮区域 -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 按钮1：日常任务一览表 -->
+                <a href="https://www.kdocs.cn/wo/sl/v1UZOs8" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-list text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">日常任务一览表</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-primary">查看所有教学任务列表</p>
+                    </div>
+                </a>
+
+                <!-- 按钮2：资料提交入口 -->
+                <a href="https://www.kdocs.cn/wo/sl/v14QxsZG" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-upload text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">资料提交入口</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-primary">提交教学相关资料</p>
+                    </div>
+                </a>
+
+                <!-- 科研统计按钮组 -->
+                <div class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow科研统计">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-flask text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">科研统计</h3>
+                    </div>
+                    <div class="p-4 grid grid-cols-2 gap-2">
+                        <!-- 项目 -->
+                        <a href="https://www.kdocs.cn/wo/sl/v122ZIqK" target="_blank" class="p-3 bg-neutral rounded-lg hover:bg-primary/5 transition-colors text-center">
+                            <i class="fa fa-briefcase mr-2"></i>项目
+                        </a>
+                        <!-- 论文 -->
+                        <a href="https://www.kdocs.cn/wo/sl/v12u3fBl" target="_blank" class="p-3 bg-neutral rounded-lg hover:bg-primary/5 transition-colors text-center">
+                            <i class="fa fa-file-text-o mr-2"></i>论文
+                        </a>
+                        <!-- 专利 -->
+                        <a href="https://www.kdocs.cn/wo/sl/v132J6or" target="_blank" class="p-3 bg-neutral rounded-lg hover:bg-primary/5 transition-colors text-center">
+                            <i class="fa fa-certificate mr-2"></i>专利
+                        </a>
+                        <!-- 著作 -->
+                        <a href="https://www.kdocs.cn/wo/sl/v1onyi8" target="_blank" class="p-3 bg-neutral rounded-lg hover:bg-primary/5 transition-colors text-center">
+                            <i class="fa fa-book mr-2"></i>著作
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 按钮3：教学任务详情 -->
+                <a href="https://www.kdocs.cn/wo/sl/v1ngfjn" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-info-circle text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">教学任务详情</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-primary">查看具体教学任务的详细信息</p>
+                    </div>
+                </a>
+
+                <!-- 按钮4：听课记录提交 -->
+                <a href="https://www.kdocs.cn/wo/sl/v12SzteK" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-pencil-square-o text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">听课记录提交</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-primary">提交听课记录</p>
+                    </div>
+                </a>
+
+                <!-- 备用按钮 -->
+                <a href="#" target="_blank" class="bg-white rounded-xl overflow-hidden card-shadow group card-hover button-glow">
+                    <div class="h-48 bg-gradient-to-br from-primary/5 to-primary/10 flex flex-col items-center justify-center p-4">
+                        <div class="icon-container bg-primary/10 group-hover:bg-primary/20 icon-animation">
+                            <i class="fa fa-cog text-primary text-4xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-dark group-hover:text-gradient">备用</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 group-hover:text-primary">备用功能入口</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部版权信息 -->
+    <footer class="bg-dark text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2025 安阳学院教学管理系统 版权所有</p>
+            <p class="mt-2 text-sm opacity-75">联系电话：0372-1234567 | 邮箱：contact@ayxy.edu.cn</p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加按钮点击效果
+        document.querySelectorAll('a').forEach(button => {
+            button.addEventListener('click', function(e) {
+                this.classList.add('scale-95');
+                setTimeout(() => {
+                    this.classList.remove('scale-95');
+                }, 200);
+            });
+        });
+
+        // 为每个按钮添加不同的悬停效果
+        document.querySelectorAll('a').forEach((button, index) => {
+            const colors = ['from-primary/5 to-primary/10', 'from-secondary/5 to-secondary/10', 'from-accent/5 to-accent/10', 'from-success/5 to-success/10'];
+            const icons = ['fa-list', 'fa-upload', 'fa-flask', 'fa-info-circle', 'fa-pencil-square-o', 'fa-cog'];
+            
+            // 跳过科研统计内部的小按钮
+            if (button.closest('.科研统计') && button.closest('.科研统计') !== button) {
+                return;
+            }
+            
+            // 设置图标（排除科研统计内部的小按钮）
+            const iconElement = button.querySelector('i');
+            if (iconElement && iconElement.classList.contains('text-4xl')) {
+                iconElement.className = `fa ${icons[index % icons.length]} text-primary text-4xl`;
+            }
+            
+            // 设置渐变背景
+            const bgElement = button.querySelector('.h-48');
+            if (bgElement) {
+                bgElement.className = `h-48 bg-gradient-to-br ${colors[index % colors.length]} flex flex-col items-center justify-center p-4`;
+            }
+        });
+    </script>
+</body>
+</html>
+    
